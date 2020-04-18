@@ -1,0 +1,19 @@
+{% extends "remate_django_baseapp/remate_django_baseapp_basepage.html"%}
+{% load static %}
+{% block body_block %}
+
+<div class="container">
+    <h1>This is my CUSTOMERS page that uses a base html</h1>
+    {% if customers %}
+    <ol>
+      {% for person in customers %}
+      <li>Customer Info</li>
+      <ul>
+        <li>Customer Name: {{person.customer_name}}</li>
+        <li>Web site: {{person.url}}</li>
+      </ul>
+      {% endfor %}
+    </ol>
+    {% endif %}
+</div>
+{% endblock %}

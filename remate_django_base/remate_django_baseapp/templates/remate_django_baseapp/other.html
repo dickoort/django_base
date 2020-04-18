@@ -1,0 +1,16 @@
+{% extends "remate_django_baseapp/remate_django_baseapp_basepage.html"%}
+{% load static %}
+{% block body_block %}
+
+<div class="container">
+    <h1>This is my OTHER page that uses a base html</h1>
+      <h1>Please register customers here!</h1>
+      <form method="POST">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <input type="submit" class='btn btn-primary' value="Submit">
+      </form>
+</div>
+
+
+{% endblock %}
